@@ -6,11 +6,12 @@ jobs:
       ARCH: $(go env GOARCH).
       NODE_DISK_MANAGER: ndm
       CHANGE_MINIKUBE_NONE_USER: true
-    working_directory: {{GOPATH}}/src/github.com/openebs/node-disk-manager
+    working_directory: $GOPATH/src/github.com/openebs/node-disk-manager
     steps:
       - checkout
       - run: pwd
       - run: ls -lrth
+      - run: echo "$GOPATH"
       - run: make
       - run: sudo apt-get update
       - run: curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.9.4/bin/darwin/amd64/kubectl

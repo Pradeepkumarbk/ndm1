@@ -9,6 +9,8 @@ jobs:
     working_directory: $GOPATH/src/github.com/openebs/node-disk-manager
     steps:
       - checkout
+      - run: pwd
+      - run: ls -lrth
       - run: make
       - run: sudo apt-get update
       - run: curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.9.4/bin/darwin/amd64/kubectl

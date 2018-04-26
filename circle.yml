@@ -1,5 +1,6 @@
 version: 2
 jobs:
   build:
+   machine: true
     working_directory: /go/src/github.com/openebs/node-disk-manager
 

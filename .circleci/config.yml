@@ -24,6 +24,7 @@ jobs:
       - run: curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.26.0/minikube-linux-amd64
       - run: chmod +x minikube
       - run: mv minikube /usr/local/bin/
+      - run: apt install build-essential
       - run: make bootstrap
       - run: make
       - run: make e2e

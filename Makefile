@@ -16,7 +16,7 @@ VERSION:=$(shell git describe --tags --always)
 TAG?=$(VERSION)
 
 # IMAGE is the image name of the node-disk-manager docker image.
-IMAGE:=pradeepkumar95/node-disk-manager-${XC_ARCH}:${TAG}
+IMAGE:=openebs/node-disk-manager-${XC_ARCH}:${TAG}
 
 # The ubuntu:16.04 image is being used as base image.
 BASEIMAGE:=ubuntu:16.04

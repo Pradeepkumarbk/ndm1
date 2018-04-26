@@ -6,7 +6,6 @@ jobs:
       - image: circleci/golang:1.9
     environment: 
       ARCH: $(go env GOARCH)
-      TAG: $(git describe --tags --always)
       NODE_DISK_MANAGER: ndm
       CHANGE_MINIKUBE_NONE_USER: true
     working_directory: /go/src/github.com/openebs/node-disk-manager

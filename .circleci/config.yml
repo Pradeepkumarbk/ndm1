@@ -6,6 +6,7 @@ jobs:
       ARCH: $(go env GOARCH).
       NODE_DISK_MANAGER: ndm
       CHANGE_MINIKUBE_NONE_USER: true
+      sudo: required
     working_directory: /go/src/github.com/openebs/node-disk-manager
     steps:
       - checkout

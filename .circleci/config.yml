@@ -1,11 +1,9 @@
 version: 2
 jobs:
   build:
-    docker:
-      # CircleCI Go images available at: https://hub.docker.com/r/circleci/golang/
-      - image: circleci/golang:1.9
+    machine: true
     environment: 
-      ARCH: $(go env GOARCH)
+      ARCH: $(go env GOARCH).
       NODE_DISK_MANAGER: ndm
       CHANGE_MINIKUBE_NONE_USER: true
     working_directory: /go/src/github.com/openebs/node-disk-manager

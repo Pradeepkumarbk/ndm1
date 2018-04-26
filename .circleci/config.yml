@@ -12,4 +12,11 @@ jobs:
     working_directory: /go/src/github.com/openebs/node-disk-manager
     steps:
       - checkout
+      - run:  make bootstrap
       - run: sudo apt-get update
+      - run: curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.9.4/bin/darwin/amd64/kubectl
+      - run: sudo chmod +x ./kubectl
+      - run: sudo mv ./kubectl /usr/local/bin/kubectl
+      - run: curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.26.0/minikube-linux-amd64
+      - run: sudo chmod +x minikube
+      - run: sudo mv minikube /usr/local/bin/

@@ -12,4 +12,4 @@ jobs:
     working_directory: /go/src/github.com/openebs/node-disk-manager
     steps:
       - checkout
-
+      - run: sudo apt-get update

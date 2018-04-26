@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     machine:
-      image: ubuntu:16.04.2 LTS
+      image: ubuntu/16.04
     environment: 
       ARCH: $(go env GOARCH).
       NODE_DISK_MANAGER: ndm

@@ -153,7 +153,10 @@ jobs:
       # Starting minikube
       - run:
           name: Starting minikube
-          command: minikube start --vm-driver=none --feature-gates=MountPropagation=true
+          command: |
+            minikube delete
+            minikube config set WantKubectlDownloadMsg false
+            minikube start --vm-driver=none --feature-gates=MountPropagation=true
 
       # Testing
       - run:

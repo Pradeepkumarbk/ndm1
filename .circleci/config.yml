@@ -3,7 +3,7 @@ jobs:
   build:
     #docker:
     #  - image: ubuntu:16.04
-     machine: true
+    machine: true
     environment:
       # ARCH: $(go env GOARCH)
       NODE_DISK_MANAGER: ndm

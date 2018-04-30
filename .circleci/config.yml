@@ -81,13 +81,13 @@ jobs:
           name: Installing kubeadm
           command: apt install -y kubeadm=1.10.0-00
 
-      -run:
-         name: vm
-         command: |
-           sh -c "echo 'deb http://download.virtualbox.org/virtualbox/debian xenial contrib non-free' >> /etc/apt/sources.list.d/virtualbox.list"
-           curl -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
-           apt-get -y update
-           apt-get install -y virtualbox-5.0  
+      - run:
+          name: vm
+          command: |
+            sh -c "echo 'deb http://download.virtualbox.org/virtualbox/debian xenial contrib non-free' >> /etc/apt/sources.list.d/virtualbox.list"
+            curl -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
+            apt-get -y update
+            apt-get install -y virtualbox-5.0  
 
       # Installing kubectl
       - run:

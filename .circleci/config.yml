@@ -85,7 +85,7 @@ jobs:
       - run:
           name: Installing kubectl
           command: |
-            sudo apt-get install virtualbox
+            sudo apt-get -y install virtualbox
             curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.9.4/bin/darwin/amd64/kubectl
             sudo chmod +x ./kubectl
             sudo mv ./kubectl /usr/local/bin/kubectl

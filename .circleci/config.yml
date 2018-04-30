@@ -155,6 +155,7 @@ jobs:
           name: Starting minikube
           command: |
             rm -rf ~/.minikube
+            apt-get install -y virtualbox
             minikube start 
 
       # Testing

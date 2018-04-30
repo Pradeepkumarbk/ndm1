@@ -1,9 +1,9 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: ubuntu:16.04
-    # machine: true
+    #docker:
+    #  - image: ubuntu:16.04
+     machine: true
     environment:
       # ARCH: $(go env GOARCH)
       NODE_DISK_MANAGER: ndm
@@ -153,10 +153,7 @@ jobs:
       # Starting minikube
       - run:
           name: Starting minikube
-          command: |
-            minikube delete
-            minikube config set WantKubectlDownloadMsg false
-            minikube start --vm-driver=none --feature-gates=MountPropagation=true
+          command:  minikube start --vm-driver=none --feature-gates=MountPropagation=true
 
       # Testing
       - run:
